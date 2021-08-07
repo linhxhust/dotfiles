@@ -1,0 +1,12 @@
+[user]
+    name = Linh Nguyen
+    email = linh+github@rba.sh
+[core]
+    excludesfile = /home/linhnguyen/.gitignore_global
+    editor = nvim
+    pager = delta
+[credential]
+    helper = store
+[pull]
+	ff = only
+
