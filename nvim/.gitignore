@@ -1,6 +1,0 @@
-autoload/*
-coc/*
-!coc/extensions/
-coc/extensions/*
-!coc/extensions/package.json
-plugged/*

@@ -37,7 +37,7 @@ alias vim='nvim'
 alias ev='cd ~/.config/nvim && vim'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
-alias ei='vim ~/.i3/config'
+alias ei='vim ~/.config/i3/config'
 alias es='vim ~/.ssh/config'
 alias ea='vim ~/.config/alacritty/alacritty.yml'
 
@@ -71,14 +71,14 @@ export PATH=$PATH:$GOROOT/bin
 #export PATH="$PATH:`yarn global bin`"
 
 # Rust
-export PATH=/home/linhnguyen/.cargo/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 source $HOME/.cargo/env
 
 # Anaconda2
-export PATH=/home/linhnguyen/src/frameworks/anaconda2/bin:$PATH
+export PATH=$HOME/src/frameworks/anaconda2/bin:$PATH
 
 # export PATH for gem ruby
-#export PATH=/home/linhnguyen/.gem/ruby/2.7.0/bin:$PATH
+#export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
