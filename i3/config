@@ -16,7 +16,7 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
+bindsym $mod+y border pixel 2
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -47,17 +47,11 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -q -D pulse sset Mas
 bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -q -D pulse sset Master 10%+ unmute
 bindsym XF86AudioMute           exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
-# Keyboard backlight control
-#bindsym XF86KbdBrightnessUp exec kbdbacklight toggle
-
 bindsym $mod+F3 exec pcmanfm
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+Shift+c --release exec "dunstctl close-all; notify-send ' Clear notifications'"
 bindsym Print exec --no-startup-id flameshot screen --path ~/Pictures
 bindsym $mod+Print --release exec --no-startup-id flameshot gui
 bindsym $mod+Shift+Print --release exec --no-startup-id flameshot gui
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 focus_follows_mouse no
 
@@ -92,8 +86,6 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-#bindsym $mod+h split h;exec notify-send 'tile horizontally'
-#bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+z split toggle
 
 # toggle fullscreen mode for the focused container
@@ -106,13 +98,10 @@ bindsym $mod+Shift+d layout toggle split
 bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus mode_toggle
 
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
