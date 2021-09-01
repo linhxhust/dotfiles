@@ -28,6 +28,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec --no-startup-id alacritty --title floating_term
 
 # kill focused window
 bindsym $mod+q kill
@@ -195,6 +196,9 @@ for_window [class="Pavucontrol"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
+
+# Add a role to open application in floating mode
+for_window [class="Alacritty" title="floating_term"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
