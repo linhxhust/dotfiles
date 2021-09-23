@@ -47,7 +47,7 @@ alias tnew='tmux new-session -s'
 alias tls='tmux list-sessions'
 alias tkill='tmux kill-session -t'
 
-alias dell='xrandr --output HDMI1 --auto --right-of eDP1 --mode 2560x1440 && nitrogen --restore'
+alias dell='xrandr --output DP-2 --right-of eDP-1 --mode 2560x1440 --output HDMI-1 --auto --right-of DP-2 --mode 2560x1440 --output eDP-1 --off && nitrogen --restore'
 alias dell_dup='xrandr --output HDMI1 --auto --same-as eDP1 --mode 1920x1080 && nitrogen --restore'
 alias hp='xrandr --output HDMI1 --auto --right-of eDP1 --mode 1920x1080 && nitrogen --restore'
 alias office_dup='xrandr --output HDMI1 --auto --same-as eDP1 --mode 1920x1080 && nitrogen --restore'
