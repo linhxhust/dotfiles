@@ -249,7 +249,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+Escape exec --no-startup-id betterlockscreen -l dim -t "U DONT KNOW MY PASSWORD BITCH?"
+bindsym $mod+Escape exec --no-startup-id bash ~/.config/i3/betterlockscreen -l dim -t "U DONT KNOW MY PASSWORD BITCH?"
 
 bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
