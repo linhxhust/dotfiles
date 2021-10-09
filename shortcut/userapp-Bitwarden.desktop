@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Exec=/bin/bash -c "$HOME/.local/bin/bitwarden-rofi/bwmenu"
+Exec=/bin/bash -c "$HOME/.local/bin/bitwarden-rofi/bwmenu -- -theme Arc-Dark"
 Name=Bitwarden
 Comment=Custom definition for Bitwarden
