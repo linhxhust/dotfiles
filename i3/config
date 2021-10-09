@@ -173,7 +173,7 @@ exec --no-startup-id /usr/local/bin/ntfd
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id ibus-daemon --xim -d -r
 # exec --no-startup-id blueman-applet
-exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 120 'notify-send " Lock screen after 10s"' '' --timer 10 '~/.config/i3/betterlockscreen -l dim -t "U DONT KNOW MY PASSWORD BITCH?"' ''
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 120 'notify-send " Lock screen after 10s"' 'dunstctl close-all' --timer 10 'dunstctl close-all && ~/.config/i3/betterlockscreen -l dim -t "U DONT KNOW MY PASSWORD BITCH?"' ''
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
