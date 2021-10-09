@@ -169,7 +169,7 @@ exec i3-msg 'workspace 2; exec google-chrome-stable'
 exec --no-startup-id bash ~/.config/polybar/launch.sh
 exec --no-startup-id flameshot
 exec --no-startup-id /usr/local/bin/ntfd
-exec --no-startup-id xrandr --output eDP-1 --primary
+# exec --no-startup-id xrandr --output eDP-1 --primary
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id ibus-daemon --xim -d -r
 # exec --no-startup-id blueman-applet

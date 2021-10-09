@@ -29,8 +29,12 @@ fi
 # Copy my public key to the pasteboard
 alias pubkeyrsa="cat ~/.ssh/id_rsa.pub | xclip -selection c | printf '=> Public key copied to pasteboard.\n'"
 alias pubkeyed25519="cat ~/.ssh/id_ed25519.pub | xclip -selection c | printf '=> Public key copied to pasteboard.\n'"
-alias pyserver="python -m SimpleHTTPServer"
+# Start simple http server
+alias pyserver="python -m http.server"
+# Random a openssl string
 alias randpwd="echo -n $(openssl rand -hex 20) | xclip -i -selection c | printf '=> Random password copied to pasteboard\n'"
+# Get current public ip
+alias getip="curl checkip.amazonaws.com"
 
 # convenience aliases for editing configs
 alias vim='nvim'
