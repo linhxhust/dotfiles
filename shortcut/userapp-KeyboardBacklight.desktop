@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=/bin/bash -c "$HOME/.local/bin/kbdbacklight toggle"
+Name=Keyboard Keyboard Toggle
+Comment=Custom definition for keyboard backlight toggle

@@ -1,3 +1,6 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:tanlinhnd/neovim-config.git
+[submodule "bitwarden-rofi"]
+	path = bitwarden-rofi
+	url = git@github.com:mattydebie/bitwarden-rofi.git

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=/bin/bash -c "$HOME/.local/bin/nordvpn-rofi.sh"
+Name=NordVPN
+Comment=Custom definition for NordVPN
