@@ -35,6 +35,8 @@ alias pyserver="python -m http.server"
 alias randpwd="echo -n $(openssl rand -hex 20) | xclip -i -selection c | printf '=> Random password copied to pasteboard\n'"
 # Get current public ip
 alias getip="curl checkip.amazonaws.com"
+# Clear dns cache
+alias clear_dns="sudo resolvectl flush-caches"
 
 # convenience aliases for editing configs
 alias vim='nvim'
