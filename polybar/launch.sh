@@ -11,7 +11,7 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
-itf=$(ip a | awk '/state UP/ {print $2}' | cut -d ":" -f1)
+itf=$(ip a | awk '/state UP/ {print $2}' | cut -d ":" -f1 | head -n 1)
 number_of_monitor=$(($(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)))
 if [ $number_of_monitor -gt 1 ]; then
   for m in $(xrandr --query | grep -v eDP | grep " connected" | cut -d" " -f1); do
