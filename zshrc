@@ -94,3 +94,6 @@ export CLUTTER_IM_MODULE=ibus
 
 # Starship
 eval "$(starship init zsh)"
+
+# kubectl auto completion
+source <(kubectl completion zsh)
