@@ -53,6 +53,7 @@ alias tnew='tmux new-session -s'
 alias tls='tmux list-sessions'
 alias tkill='tmux kill-session -t'
 
+# alias for monitor
 alias dell='xrandr --output DP-2 --right-of eDP-1 --mode 2560x1440 --output HDMI-1 --auto --right-of DP-2 --mode 2560x1440 --output eDP-1 --off && nitrogen --restore && bash ~/.config/polybar/launch.sh'
 alias dell_dup='xrandr --output HDMI-1 --auto --same-as eDP-1 --mode 1920x1080 && nitrogen --restore'
 alias hp='xrandr --output HDMI-1 --auto --right-of eDP-1 --mode 1920x1080 && nitrogen --restore'
@@ -64,6 +65,9 @@ alias tf="terraform"
 alias tfi="terraform init"
 alias tfp="terraform plan"
 alias tfa="terraform apply"
+
+# alias for kubectl
+alias k="kubectl"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
