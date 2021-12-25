@@ -66,8 +66,9 @@ alias tfi="terraform init"
 alias tfp="terraform plan"
 alias tfa="terraform apply"
 
-# alias for kubectl
+# alias for kube tools
 alias k="kubectl"
+alias m="minikube"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
