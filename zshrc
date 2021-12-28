@@ -66,13 +66,15 @@ alias tfi="terraform init"
 alias tfp="terraform plan"
 alias tfa="terraform apply"
 
-# alias for kubectl
+# alias for kube tools
 alias k="kubectl"
+alias m="minikube"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Golang
+export PATH=$HOME/src/tools/go/default/bin:$PATH
 export GOPATH=$HOME/src/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
