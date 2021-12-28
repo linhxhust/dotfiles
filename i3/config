@@ -165,6 +165,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 # Auto start application
 exec i3-msg 'workspace 1; exec slack'
 exec i3-msg 'workspace 2; exec firefox'
+exec i3-msg 'workspace 3; exec firefox -P SporesSpores'
 exec --no-startup-id bash ~/.config/polybar/launch.sh
 exec --no-startup-id flameshot
 exec --no-startup-id /usr/local/bin/ntfd
