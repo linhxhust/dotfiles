@@ -67,8 +67,9 @@ alias tfp="terraform plan"
 alias tfa="terraform apply"
 
 # alias for kube tools
-alias k="kubectl"
 alias m="minikube"
+alias k="kubectl"
+alias kcu="kubectl config use-context"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -103,3 +104,6 @@ eval "$(starship init zsh)"
 
 # kubectl auto completion
 source <(kubectl completion zsh)
+
+# KUBECONFIG
+export KUBECONFIG=~/.kube/kubeconfig
