@@ -70,6 +70,7 @@ alias tfa="terraform apply"
 alias m="minikube"
 alias k="kubectl"
 alias kcu="kubectl config use-context"
+alias h="helm"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
