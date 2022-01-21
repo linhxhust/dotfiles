@@ -108,3 +108,5 @@ source <(kubectl completion zsh)
 
 # KUBECONFIG
 export KUBECONFIG=~/.kube/kubeconfig
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
