@@ -70,6 +70,7 @@ alias tfa="terraform apply"
 alias m="minikube"
 alias k="kubectl"
 alias kl="kubectl logs -f"
+alias kgp="kubectl get pod"
 alias kcu="kubectl config use-context"
 alias h="helm"
 
