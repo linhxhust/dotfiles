@@ -73,6 +73,7 @@ alias kl="kubectl logs -f"
 alias kgp="kubectl get pod"
 alias kcu="kubectl config use-context"
 alias h="helm"
+alias kz="kustomize"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -107,6 +108,7 @@ eval "$(starship init zsh)"
 
 # kubectl auto completion
 source <(kubectl completion zsh)
+source <(kustomize completion zsh)
 
 # KUBECONFIG
 export KUBECONFIG=~/.kube/kubeconfig
