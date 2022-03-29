@@ -113,4 +113,9 @@ source <(kustomize completion zsh)
 # KUBECONFIG
 export KUBECONFIG=~/.kube/kubeconfig
 
+export TERM=xterm-256color
+
+# Arkade
+export PATH=$PATH:$HOME/.arkade/bin/
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
