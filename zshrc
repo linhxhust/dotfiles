@@ -94,6 +94,9 @@ source $HOME/.cargo/env
 # Anaconda2
 export PATH=$HOME/src/frameworks/anaconda2/bin:$PATH
 
+# Arkade
+export PATH=$PATH:$HOME/.arkade/bin/
+
 # export PATH for gem ruby
 #export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
 
@@ -115,7 +118,5 @@ export KUBECONFIG=~/.kube/kubeconfig
 
 export TERM=xterm-256color
 
-# Arkade
-export PATH=$PATH:$HOME/.arkade/bin/
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
