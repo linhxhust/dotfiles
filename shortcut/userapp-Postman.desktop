@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=$HOME/.local/bin/postman
+Name=Postman
+Comment=Custom definition for Postman
