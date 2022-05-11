@@ -10,7 +10,7 @@ menu() {
 init_menu() {
     local choices
     aws_status=$(ip a | grep 10.7.0.2\/24 | wc -l)
-    personal_status=$(ip a | grep 172.21.0.2\/24 | wc -l)
+    personal_status=$(ip a | grep 10.19.0.3\/24 | wc -l)
     choices=""
     if [ "$aws_status" = "1" ] && [ "$personal_status" = "0" ]; then
         choices=" Disconnect Amazon WebServices\n Personal"
