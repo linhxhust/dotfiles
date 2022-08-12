@@ -19,11 +19,11 @@ export PATH=$HOME/.local/bin:$PATH
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR="vim"
-else
-  export EDITOR="nvim"
-fi
+#if [[ -n $SSH_CONNECTION ]]; then
+#  export EDITOR="vim"
+#else
+#  export EDITOR="nvim"
+#fi
 
 # Custom ZSH
 # Copy my public key to the pasteboard
@@ -39,7 +39,7 @@ alias getip="curl checkip.amazonaws.com"
 alias clear_dns="sudo resolvectl flush-caches"
 
 # convenience aliases for editing configs
-alias vim='nvim'
+#alias vim='nvim'
 alias ev='cd ~/.config/nvim && vim'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
@@ -80,7 +80,7 @@ export LANG=en_US.UTF-8
 
 # Golang
 export PATH=$HOME/src/tools/go/default/bin:$PATH
-export GOPATH=$HOME/src/go
+export GOPATH=$HOME/src/tools/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
