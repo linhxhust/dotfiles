@@ -1,6 +1,6 @@
 [user]
     name = Linh Nguyen
-    email = linh+github@dmesg.sh
+    email = linh@dmesg.sh
 [core]
     excludesfile = /home/linhnguyen/.gitignore_global
     editor = nvim
