@@ -88,8 +88,8 @@ export PATH=$PATH:$GOROOT/bin
 #export PATH="$PATH:`yarn global bin`"
 
 # Rust
-export PATH=$HOME/.cargo/bin:$PATH
-source $HOME/.cargo/env
+#export PATH=$HOME/.cargo/bin:$PATH
+#source $HOME/.cargo/env
 
 # Anaconda2
 export PATH=$HOME/src/frameworks/anaconda2/bin:$PATH
