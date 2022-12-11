@@ -2,3 +2,15 @@ add_newline = false
 
 [line_break]
 disabled = true
+
+[kubernetes]
+#format = 'on [⛵ $context \($namespace\)](dimmed green) '
+format = 'on [k8s ⛵$context](dimmed green) '
+disabled = false
+
+[gcloud]
+format = 'gcp [$account(@$domain)(\($project\))]($style) '
+disabled = true
+
+[hostname]
+disabled = true
