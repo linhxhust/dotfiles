@@ -1,7 +1,7 @@
 [
   {
     "name": "Lock screen",
-    "exec": "swaylock",
+    "exec": "swaylock -C ~/.config/swaylock/config",
     "icon": "/usr/share/nwg-launchers/nwgbar/images/lock.svg"
   },
   {

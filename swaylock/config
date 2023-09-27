@@ -2,16 +2,14 @@
 # no-unlock-indicator
 # daemonize
 indicator-caps-lock
-image=/home/linhnguyen/.config/sway/backgrounds/aesthetic.png
+image=$HOME/.config/swaylock/background.png
 scaling=fill
 # color=00000000
-screenshots
 clock
 effect-blur=7x5
 effect-vignette=0.5:0.5:0.5:0.5:0
 font=Hack
 font-size=20
-
 
 # Ring
 indicator-radius=150
