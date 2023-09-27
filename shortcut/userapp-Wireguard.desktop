@@ -1,6 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Exec=/bin/bash -c "$HOME/.local/bin/wireguard-rofi.sh"
-Name=WireguardVPN
-Comment=Custom definition for Wireguard VPN

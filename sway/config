@@ -1,0 +1,18 @@
+include catppuccin-mocha
+# Config for sway
+#
+# Read `man 5 sway` for a complete reference.
+
+# user config directory
+include $HOME/.config/sway/config.d/*
+
+# only enable this if every app you use is compatible with wayland
+# xwayland disable
+
+# Set the background image
+output * bg /home/linhnguyen/.config/sway/backgrounds/under_the_night_sky_by_bisbiswas_ddfk819-fullview.jpg fill
+
+# Set the initial keyboard layout
+input * {
+    xkb_layout "us"
+}

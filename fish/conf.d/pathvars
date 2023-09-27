@@ -1,0 +1,3 @@
+if status --is-login
+	set -gx PATH $PATH ~/.cargo/bin
+end

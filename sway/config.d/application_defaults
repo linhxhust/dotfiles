@@ -1,0 +1,4 @@
+# set floating (nontiling)for apps needing it:
+for_window [app_id="pavucontrol" ] floating enable, resize set width 40 ppt height 30 ppt
+for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
+for_window [title="floating_term"] floating enable

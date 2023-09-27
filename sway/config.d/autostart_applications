@@ -1,0 +1,35 @@
+# Auth with polkit-gnome:
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Desktop notifications
+exec mako
+
+# Pipewire already started using systemctl
+# systemctl --user start pipewire-pulse
+# systemctl --user enable pipewire-pulse
+
+# GTK3 applications take a long time to start
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+    dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+ 
+# Wob
+exec mkfifo $SWAYSOCK.wob
+# THIS DOESN'T WORK. --border-color etc. not valid
+# exec tail -f $SWAYSOCK.wob | wob --border-color '#ffdcbb8c' --background-color '#cc3a3a3a' --bar-color '#ffdcbb8c'
+exec tail -f $SWAYSOCK.wob | wob
+
+# Wlsunset
+# exec ~/.config/sway/scripts/light.sh
+
+# nm-applet
+exec nm-applet --indicator
+
+# Gnome Keyring
+exec gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,secrets,ssh
+
+# swayrd
+exec_always /usr/local/bin/swayrd
+
+# fcitx5
+exec --no-startup-id fcitx5 -d
