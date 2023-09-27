@@ -2,7 +2,7 @@
 # no-unlock-indicator
 # daemonize
 indicator-caps-lock
-image=$HOME/.config/swaylock/background.png
+image=~/.config/swaylock/background.png
 scaling=fill
 # color=00000000
 clock

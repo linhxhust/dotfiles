@@ -10,7 +10,7 @@ include $HOME/.config/sway/config.d/*
 # xwayland disable
 
 # Set the background image
-output * bg /home/linhnguyen/.config/sway/backgrounds/under_the_night_sky_by_bisbiswas_ddfk819-fullview.jpg fill
+output * bg /home/linhnguyen/.config/sway/backgrounds/classic.jpg fill
 
 # Set the initial keyboard layout
 input * {
