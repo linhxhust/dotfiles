@@ -146,7 +146,7 @@ window#waybar {
 }
 
 #cpu {
-    color: @sky;
+    color: @red;
     /* border-bottom: 2px solid @sky; */
 }
 
@@ -155,7 +155,7 @@ window#waybar {
 }
 
 #memory {
-    color: @sky;
+    color: @red;
     margin-right: 10px;
     border-radius: 0 5px 5px 0;
 }
@@ -190,7 +190,7 @@ window#waybar {
 }
 
 #temperature {
-    color: @teal;
+    color: @red;
     /* border-bottom: 2px solid @teal; */
     border-radius: 5px 0 0 5px;
 }
