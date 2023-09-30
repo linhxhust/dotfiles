@@ -41,11 +41,10 @@ focus_follows_mouse no
 bindsym $mod+d exec $menu
 
 # Activities
-bindsym $mod+Space       exec swayr switch-window
-# bindsym $mod+p exec swayr switch-window
+bindsym $mod+Space exec swayr switch-window
 
 # Activities and workspaces
-bindsym $mod+Shift+p exec swayr switch-workspace-or-window
+# bindsym $mod+Shift+p exec swayr switch-workspace-or-window
 
 # Switch to the last recently used window
 bindsym $mod+Tab exec swayr switch-to-urgent-or-lru-window
@@ -115,8 +114,7 @@ bindsym $mod+Shift+9 move container to workspace number 9, workspace 9
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
-bindsym $mod+Shift+z splith
-bindsym $mod+z layout toggle split 
+bindsym $mod+z split toggle
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking
