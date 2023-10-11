@@ -114,7 +114,8 @@ window#waybar {
 #mode,
 #tray,
 #custom-power,
-#custom-launcher {
+#custom-launcher,
+#custom-aerox5-battery {
     padding: 5px 8px;
     border-style: solid;
     background-color: shade(@base, 1);
@@ -129,6 +130,13 @@ window#waybar {
 #custom-spotify {
     padding: 5px 5px;
     margin-right: 5px;
+    color: @green;
+}
+
+#custom-aerox5-battery {
+    padding: 5px 5px;
+    margin-right: 5px;
+    border-radius: 5px;
     color: @green;
 }
 

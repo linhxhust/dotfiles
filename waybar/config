@@ -14,6 +14,7 @@
     ],
     "modules-right": [
         "tray",
+        "custom/aerox5-battery",
         "pulseaudio",
         "temperature",
         "cpu",
@@ -44,13 +45,19 @@
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"
     },
+    "custom/aerox5-battery": {
+        "exec": "$HOME/.config/waybar/scripts/aerox5-battery.sh",
+        "format": "🖱️{}%",
+        "interval": 60,
+        "tooltip": false
+    },
     "tray": {
         "icon-size": 14,
         "spacing": 5
     },
     "clock": {
         "tooltip-format": "{:%A %B %d %Y | %H:%M}",
-        "format": " {:%a %d %b  %I:%M %p}",
+        "format": " {:%A %d %b  %I:%M %p}",
         "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
         "timezones": [
             "Ho_Chi_Minh"
@@ -66,16 +73,16 @@
         "on-click": "alacritty -e htop"
     },
     "temperature": {
-        "thermal-zone": 2,
-        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "thermal-zone": 1,
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
         "critical-threshold": 80,
-        "format": " {temperatureC}°C"
+        "format": " {temperatureC}°C",
+        "input-filename": "temp1_input"
     },
     "network": {
         "format": "⚠  Disabled",
         "format-wifi": "  {essid}",
         "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
-        // "format-ethernet": "  Wired",
         "format-disconnected": "⚠  Disconnected",
         "on-click": "nm-connection-editor"
     },

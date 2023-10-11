@@ -101,12 +101,9 @@ alias ip='ip -color'
 
 # Replace some more things with better alternatives
 alias cat='bat --style header --style snip --style changes --style header'
-#alias cat='bat'
-[ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 
 # Common use
 alias grubup="sudo update-grub"
-alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias tarnow='tar -acf '
 alias untar='tar -xvf '
 alias wget='wget -c '
@@ -122,9 +119,25 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='grep -F --color=auto'
 alias egrep='grep -E --color=auto'
-alias hw='hwinfo --short'                          # Hardware Info
+
+# Hardware Info
+alias hw='hwinfo --short'
+
+# Tmux
+alias tnew='tmux new -s'
+alias tls='tmux list-sessions'
+alias tkill='tmux kill-session -t'
+alias ta='tmux attach-session -t'
 
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
 # Recent installed packages
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/linhnguyen/src/miniconda3/bin/conda
+    eval /home/linhnguyen/src/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+end
+# <<< conda initialize <<<
+

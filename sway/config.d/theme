@@ -25,10 +25,12 @@ for_window [class="^.*"] border radius 30
 for_window [app_id="^.*"] border pixel 2
 for_window [app_id="^.*"] border radius 30
 
-# Dont apply opacity on Dota 2
+# Dont apply opacity
 for_window [class="dota2"] opacity 1
+for_window [class="Vivaldi-stable"] opacity 1
 
-set $opacity 0.95
+#set $opacity 0.95
+set $opacity 1
 
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
