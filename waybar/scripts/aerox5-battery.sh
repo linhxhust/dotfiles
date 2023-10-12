@@ -1,3 +1,2 @@
 #!/bin/bash
-
-rivalcfg --battery-level | tr ' ' '\a' | awk -F'\a' '{print $3}'
+rivalcfg --battery-level | tr -d '[:blank:]' | awk -F] '{print $2}'

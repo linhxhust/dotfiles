@@ -47,7 +47,7 @@
     },
     "custom/aerox5-battery": {
         "exec": "$HOME/.config/waybar/scripts/aerox5-battery.sh",
-        "format": "🖱️{}%",
+        "format": "🖱️{}",
         "interval": 60,
         "tooltip": false
     },
@@ -88,8 +88,8 @@
     },
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "{icon} {volume: >3}%",
-        "format-bluetooth": "{icon} {volume: >3}%",
+        "format": "{icon}{volume: >3}%",
+        "format-bluetooth": "{icon}{volume: >3}%",
         "format-muted": " muted",
         "format-icons": {
             "headphones": "",
