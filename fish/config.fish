@@ -36,18 +36,13 @@ if test -d ~/src/go
     end
 end
 
-## Starship prompt
+# Starship prompt
 if status --is-interactive
-   source ("/usr/local/bin/starship" init fish --print-full-init | psub)
+   source ('/usr/local/bin/starship' init fish --print-full-init | psub)
 end
 
 ## SSH Agent
-if test -z '(pgrep ssh-agent)'
-  eval (ssh-agent -c)
-  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
-  set -Ux SSH_AGENT_PID $SSH_AGENT_PID
-  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
-end
+fish_ssh_agent
 
 ## direnv hook
 direnv hook fish | source
