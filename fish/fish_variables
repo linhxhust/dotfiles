@@ -48,4 +48,4 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/linhnguyen/src/miniconda3/condabin\x1e/home/linhnguyen/\x2ecargo/bin
+SETUVAR fish_user_paths:/opt/homebrew/bin\x1e/home/linhnguyen/src/miniconda3/condabin\x1e/home/linhnguyen/\x2ecargo/bin

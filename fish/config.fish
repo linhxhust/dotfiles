@@ -4,8 +4,6 @@ set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-
-
 ## Export variable need for qt-theme
 if type "qtile" >> /dev/null 2>&1
    set -x QT_QPA_PLATFORMTHEME "qt5ct"
@@ -36,13 +34,30 @@ if test -d ~/src/go
     end
 end
 
+# Add ~/src/go/bin to PATH
+if test -d ~/src/go/bin
+    if not contains -- ~/src/go/bin $PATH
+        set -p PATH ~/src/go/bin
+    end
+end
+
 # Starship prompt
 if status --is-interactive
-   source ('/usr/local/bin/starship' init fish --print-full-init | psub)
+   switch (uname)
+	case Darwin
+		source ("/opt/homebrew/bin/starship" init fish --print-full-init | psub)
+	case "*"
+   		source ("/usr/local/bin/starship" init fish --print-full-init | psub)
+   end
 end
 
 ## SSH Agent
-fish_ssh_agent
+if test -z "(pgrep ssh-agent)"
+  eval (ssh-agent -c)
+  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+  set -Ux SSH_AGENT_PID $SSH_AGENT_PID
+  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+end
 
 ## direnv hook
 direnv hook fish | source
@@ -78,7 +93,7 @@ end
 
 # Fish command history
 function history
-    builtin history --show-time='%F %T '
+    builtin history --show-time="%F %T "
 end
 
 function backup --argument filename
@@ -87,42 +102,42 @@ end
 
 ## Useful aliases
 # Replace ls with exa
-alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
-alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first --icons'  # long format
-alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
-alias l.='exa -ald --color=always --group-directories-first --icons .*' # show only dotfiles
-alias ip='ip -color'
+alias ls="exa -al --color=always --group-directories-first --icons" # preferred listing
+alias la="exa -a --color=always --group-directories-first --icons"  # all files and dirs
+alias ll="exa -l --color=always --group-directories-first --icons"  # long format
+alias lt="exa -aT --color=always --group-directories-first --icons" # tree listing
+alias l.="exa -ald --color=always --group-directories-first --icons .*" # show only dotfiles
+alias ip="ip -color"
 
 # Replace some more things with better alternatives
-alias cat='bat --style header --style snip --style changes --style header'
+alias cat="bat --style header --style snip --style changes --style header"
 
 # Common use
 alias grubup="sudo update-grub"
-alias tarnow='tar -acf '
-alias untar='tar -xvf '
-alias wget='wget -c '
-alias psmem='ps auxf | sort -nr -k 4'
-alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='grep -F --color=auto'
-alias egrep='grep -E --color=auto'
+alias tarnow="tar -acf "
+alias untar="tar -xvf "
+alias wget="wget -c "
+alias psmem="ps aux | sort -nr -k 4"
+alias psmem10="ps aux | sort -nr -k 4 | head -10"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias dir="dir --color=auto"
+alias vdir="vdir --color=auto"
+alias grep="grep --color=auto"
+alias fgrep="grep -F --color=auto"
+alias egrep="grep -E --color=auto"
 
 # Hardware Info
-alias hw='hwinfo --short'
+alias hw="hwinfo --short"
 
 # Tmux
-alias tnew='tmux new -s'
-alias tls='tmux list-sessions'
-alias tkill='tmux kill-session -t'
-alias ta='tmux attach-session -t'
+alias tnew="tmux new -s"
+alias tls="tmux list-sessions"
+alias tkill="tmux kill-session -t"
+alias ta="tmux attach-session -t"
 
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -131,8 +146,8 @@ alias jctl="journalctl -p 3 -xb"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/linhnguyen/src/miniconda3/bin/conda
-    eval /home/linhnguyen/src/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f /Users/linhnguyen/anaconda3/bin/conda
+    eval /Users/linhnguyen/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 end
 # <<< conda initialize <<<
 
