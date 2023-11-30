@@ -142,6 +142,13 @@ alias ta="tmux attach-session -t"
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
+# Kubectl & Helm
+alias k="kubectl"
+alias kl="kubectl logs -f"
+alias kgp="kubectl get pod"
+alias kcu="kubectl config use-context"
+alias h="helm"
+
 # Recent installed packages
 
 # >>> conda initialize >>>
